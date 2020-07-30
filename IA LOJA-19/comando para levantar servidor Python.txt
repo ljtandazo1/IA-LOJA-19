@@ -1,0 +1,18 @@
+Deben tener instalado python version 2.x o Superior
+Ingresan a la carpeta donde esta el proyecto
+Abren una ventana de comandos dentro de la carpeta y pegan 
+ 
+			python -m http.server 8000
+
+
+luego se van al navegador y deben poner localhost:8000 en el buscador
+
+Luego van a la seccion noticias y les carga el mapa con 2 botones debajo: Buscar y uno Authorize
+
+Deben hacer clic en Authorize y ingresar sus credenciales de google.. 
+hay una parte que dice que no es seguro deben ingresar x ahi
+
+Luego que ingresen a google les carga ya la lista del combobox
+Ahi pueden Seleccionar y presionan el Boton "Buscar" para que les muestre las graficas
+
+ 

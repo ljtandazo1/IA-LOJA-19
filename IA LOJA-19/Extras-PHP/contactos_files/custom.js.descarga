@@ -1,0 +1,97 @@
+(function ($, Drupal, drupalSettings) {
+    
+      'use strict';
+    
+      Drupal.behaviors.tema_cafrilosa_custom = {
+        attach: function (context, settings) {
+         
+
+        //Animation Scroll
+        var config = {
+          viewFactor : 0.15,
+          duration   : 800,
+          distance   : "0px",
+          scale      : 0.8,
+          reset : false
+        }
+      
+        window.sr = new ScrollReveal(config);
+
+        var animationProduct = {
+          origin   : "bottom",
+          distance : "100px",
+          duration : 900,
+          delay    : 1500,
+          scale    : 1,
+        }
+
+        var animationContact = {
+          origin   : "bottom",
+          distance : "100px",
+          duration : 900,
+          delay    : 1200,
+          scale    : 1,
+        }
+
+        var animationTitle = {
+          origin   : "bottom",
+          distance : "100px",
+          duration : 1500,
+          scale    : 0.5,
+        }
+
+       /*
+        sr.reveal('.front .view-nuestros-productos .view-header',animationProduct);
+        sr.reveal('.front .view-nuestros-productos .views-row',animationProduct);
+        sr.reveal('.front .page-header',animationTitle);
+        */
+
+        //Contact
+       /*
+        sr.reveal('.front .contact-message-feedback-form .block-title',animationTitle);
+        sr.reveal('.front .contact-message-feedback-form .block-content',animationContact);
+        */
+       
+         /*
+          //Detecting viewpot dimension
+          var windosHeight = $(window).height();
+          var windosWidth = $(window).width();
+
+          var headerHeight = $("#header").height();
+          var slideHeight = windosHeight - headerHeight;
+          
+
+          //console.log("windosWidth: " + windosWidth);
+          //console.log("windosHeight: " + windosHeight);
+
+          //Windos:  662
+          //662 - 132 : 530
+          if (windosWidth>=1024 && windosHeight>=640){
+             
+             if (slideHeight < 530){
+                slideHeight = 530;
+             }
+             
+             if (slideHeight > 730){
+                slideHeight = 730;
+             }
+ 
+             //console.log("slideHeight: " + slideHeight);
+
+             //Adjusting Intro Components Spacing based on detected screen resolution
+             $('.front  .view-contenido-relevante .owl-carousel').css('height',slideHeight);
+
+             /*
+             TODO: $(this).height(). Detorna 0. Revisar porque el problema
+             // Set the height for the element(s if more than one).
+             $(".front .view-contenido-relevante .owl-carousel .caption").each(function () {
+                 // Set the height for the element wrap.
+                 console.log($(this).height());
+                 //$(this).css("top", (slideHeight-$(this).height()/2)+"px");
+             });
+             */
+          /*}*/ 
+        }
+      };
+    
+    })(jQuery, Drupal, drupalSettings);
